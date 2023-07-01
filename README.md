@@ -1,4 +1,3 @@
-cheatsheet = """
 # Regex Cheat Sheet
 
 ## Commonly Used Regex Operators
