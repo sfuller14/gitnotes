@@ -1,0 +1,5 @@
+rg "search_string" file.txt
+rg "search_string" directory/
+rg -i "search_string" file.txt
+rg -n "search_string" file.txt
+rg -l "search_string" directory/

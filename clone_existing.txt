@@ -1,0 +1,21 @@
+#CLONING:
+# git clone <url> <where to clone>
+git clone https://sfull14@bitbucket.org/sfull14/csa.git .
+
+# VIEW INFORMATIOON ABOUT REMOTE REPOSITORY
+git remote -v
+git branch -a # shows local and remote branches
+
+## ...make changes to code...
+
+# PUSH CHANGES TO REMOTE REPOSITORY
+git diff
+git add -A
+git status
+git commit -m "__" # This commits changes locally only
+
+# pull any changes that have been made since last time we pulled from it
+git pull origin master
+
+# push changes to master branch of remote repository
+git push -u origin master

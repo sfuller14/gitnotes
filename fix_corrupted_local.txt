@@ -1,0 +1,16 @@
+# parentfolder/origrepo is corrupted
+
+cd parentfolder
+git clone https://sfull14@bitbucket.org/sfull14/origrepo.git tempcopyrepo
+
+# Manually delete .git or (in Powershell)
+cd origrepo
+Remove-Item -LiteralPath "fullpath/parentfolder/origrepo/.git" -Force -Recurse
+Remove-Item -LiteralPath "fullpath/parentfolder/origrepo/.git" -Force -Recurse
+
+
+# then in Bash
+cd parentfolder/tempcopyrepo
+cp -r fullpath/parentfolder/tempcopyrepo/.git fullpath/parentfolder/origrepo
+
+# then go click into it

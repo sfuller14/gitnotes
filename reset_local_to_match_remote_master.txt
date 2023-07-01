@@ -1,0 +1,12 @@
+git fetch origin
+git reset --hard origin/master
+git clean -fdx
+
+# or
+
+git commit -a -m "Saving my work, just in case"
+git branch my-saved-work
+
+git fetch origin
+git reset --hard origin/master
+git clean -fdx

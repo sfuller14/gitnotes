@@ -1,0 +1,49 @@
+git --version
+git ___ --help
+git config --global user.name "Sean Fuller"
+git config --global user.email "sean.fuller.77@gmail.com"
+
+# INITIALIZE REPOSITORY FROM EXISTING LOCAL CODE
+cd local-repo
+ls -la
+git init
+ls -la
+
+# STOP TRACKING REPOSITORY WITH git
+rm -rf .git
+
+# GIT STATUS (see what's committed but not yet pushed)
+git status
+
+# GIT IGNORE
+git status
+touch .gitignore
+# open in text editor and add the below
+*.pyc
+.project # this is a filename
+# back in terminal
+git status
+# now shouldn't include files added to .gitignore
+
+# STAGING INDIVIDUAL FILES AND COMMITTING
+git add .gitignore # adds modified and untracked files
+git status
+git commit -m "__"
+git push -u origin master
+
+# STAGING MULTIPLE FILES AND COMMITTING
+git add -A # adds modified and untracked files
+git status
+git commit -m "__"
+git push -u origin master
+
+# LOOK AT WHAT YOU'VE JUST COMMITTED
+git log
+
+# PUSH NEW LOCAL REPO TO REMOTE
+git init
+# create empty repo on bitbucket with same name as parent folder
+git remote add origin https://sfull14@bitbucket.org/sfull14/[repo name].git
+git add .
+git commit -m "__"
+git push -u origin master

@@ -1,0 +1,35 @@
+#CLONING:
+# git clone <url> <where to clone>
+git clone https://sfull14@bitbucket.org/sfull14/csa.git .
+
+# VIEW INFORMATIOON ABOUT REMOTE REPOSITORY
+git remote -v
+git branch -a # shows local and remote branches
+
+
+
+# CREATE NEW BRANCH
+git branch calc-divide
+git branch # lists all local branches (* indicates what you're currently working on)
+git checkout calc-divide # moves you to branch
+git branch # to check you are on the correct branch
+
+## ...make changes to code...
+
+git status
+git add -A
+git commit -m "Divide function" # This ONLY affects LOCAL calc-divide branch
+git push -u origin calc-divide # Push to the remote calc-divide branch
+git branch -a # Now should show local and remote masters and branches
+
+# Merge branch into master
+git checkout master
+git pull origin master
+git branch --merged # shouldn't show calc-divide branch yet
+git merge calc-divide # merges changes into master locally
+git push origin master # pushes changes into remote master
+git branch --merged # now should show calc-divide branch
+
+git branch -d calc-divide # deletes branch locally
+git branch -a # can see that calc-divide still exists on remote repository
+git push origin --delete calc-divide
